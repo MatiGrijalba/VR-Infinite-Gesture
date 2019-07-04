@@ -67,7 +67,7 @@ namespace Edwon.VR.Gesture
         LineRenderer CreateLineRenderer(Color c1, Color c2)
         {
             GameObject myGo = new GameObject("Trail Renderer");
-            myGo.transform.parent = transform;
+            myGo.transform.parent = transform.GetChild(0).transform;
             myGo.transform.localPosition = Vector3.zero;
 
             LineRenderer lineRenderer = myGo.AddComponent<LineRenderer>();
